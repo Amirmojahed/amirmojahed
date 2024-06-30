@@ -1,0 +1,267 @@
+.v-application {
+  .theme--light {
+    &.v-text-field {
+      &.v-input {
+        //text field border
+        &.v-text-field--outlined {
+          border-radius: 8px;
+
+          // text field border radius
+          fieldset {
+            border: 2px solid $color-light-white-500;
+          }
+
+          .v-input__control {
+            .v-input__slot {
+              min-height: 40px;
+            }
+          }
+        }
+
+        //input icon color when focused
+        &--is-focused {
+          .v-input__control > .v-input__slot {
+            .v-icon {
+              color: $color-light-black-800 !important;
+            }
+          }
+
+          // input text color when focused
+          &.v-input {
+            input {
+              &::placeholder {
+                color: $color-light-black-800;
+              }
+            }
+          }
+        }
+
+        // input border color in hover effect
+        .v-input__control {
+          .v-input__slot {
+            &:hover {
+              // input's icon color in hover effect
+              .v-icon {
+                color: $color-light-black-800;
+              }
+            }
+          }
+        }
+
+        //input icon color
+        .v-icon {
+          color: $color-light-white-500;
+        }
+
+        // input icon color when filled
+        &--is-dirty {
+          .v-icon {
+            color: $color-light-black-800;
+          }
+        }
+
+        // add border to icon text-field
+        //.v-input__icon {
+        //  &.v-input__icon--prepend-inner {
+        //    border-right: 1px solid $color-light-white-500;
+        //    padding-right: 10px;
+        //  }
+        //}
+
+        // text field font style (color,weight,size)
+        input {
+          color: $color-light-black-800;
+          font-weight: 600;
+          font-size: 1.25rem;
+
+          &::placeholder {
+            color: $color-light-white-500;
+          }
+        }
+      }
+
+      // text field hover effect
+      &:hover {
+        &.v-input {
+          &.v-text-field--outlined fieldset {
+            border-color: $color-light-black-800;
+          }
+
+          input {
+            &::placeholder {
+              color: $color-light-black-800;
+            }
+          }
+        }
+      }
+
+      //overwrite disabled text field border color and content color
+      &.v-input--is-disabled {
+        &:hover {
+          &.v-input {
+            &.v-text-field--outlined fieldset {
+              border-color: $color-light-white-500;
+            }
+
+            input {
+              &::placeholder {
+                color: $color-light-white-500;
+              }
+            }
+          }
+        }
+      }
+
+      //disabled text field back ground color
+      &.v-text-field--outlined:not(.v-input--is-focused) {
+        &.v-input--is-disabled {
+          .v-input__control {
+            .v-input__slot fieldset {
+              background-color: $color-light-white-300;
+            }
+          }
+        }
+      }
+
+      // space between border and placeholder
+      .v-input__prepend-inner {
+        margin-right: 5px;
+      }
+    }
+
+    // cursor color
+    &.primary--text {
+      caret-color: $color-light-black-800 !important;
+    }
+  }
+
+  .theme--dark {
+    &.v-text-field {
+      &.v-input {
+        //text field border
+        &.v-text-field--outlined {
+          border-radius: 8px;
+
+          // text field border radius
+          fieldset {
+            border: 2px solid $color-light-white-500;
+          }
+        }
+
+        //input icon color when focused
+        &--is-focused {
+          .v-input__control > .v-input__slot {
+            .v-icon {
+              color: $color-light-white-100 !important;
+            }
+          }
+
+          // input text color when focused
+          &.v-input {
+            input {
+              &::placeholder {
+                color: $color-light-white-100;
+              }
+            }
+          }
+        }
+
+        // input border color in hover effect
+        .v-input__control {
+          .v-input__slot {
+            &:hover {
+              // input's icon color in hover effect
+              .v-icon {
+                color: $color-light-white-100;
+              }
+            }
+          }
+        }
+
+        //input icon color
+        .v-icon {
+          color: $color-light-white-500;
+        }
+
+        // input icon color when filled
+        &--is-dirty {
+          .v-icon {
+            color: $color-light-white-100;
+          }
+        }
+
+        //add border to icon text-field
+        //.v-input__icon {
+        //  &.v-input__icon--prepend-inner {
+        //    border-right: 1px solid $color-light-white-500;
+        //    padding-right: 10px;
+        //  }
+        //}
+
+        // text field font style (color,weight,size)
+        input {
+          color: $color-light-white-100;
+          font-weight: 600;
+          font-size: 1.25rem;
+
+          &::placeholder {
+            color: $color-light-white-500;
+          }
+        }
+      }
+
+      // text field hover effect
+      &:hover {
+        &.v-input {
+          &.v-text-field--outlined fieldset {
+            border-color: $color-light-white-100;
+          }
+
+          input {
+            &::placeholder {
+              color: $color-light-white-100;
+            }
+          }
+        }
+      }
+
+      //overwrite disabled text field border color and content color
+      &.v-input--is-disabled {
+        &:hover {
+          &.v-input {
+            &.v-text-field--outlined fieldset {
+              border-color: $color-light-white-500;
+            }
+
+            input {
+              &::placeholder {
+                color: $color-light-white-500;
+              }
+            }
+          }
+        }
+      }
+
+      //disabled text field back ground color
+      &.v-text-field--outlined:not(.v-input--is-focused) {
+        &.v-input--is-disabled {
+          .v-input__control {
+            .v-input__slot fieldset {
+              background-color: $color-light-white-300;
+            }
+          }
+        }
+      }
+
+      // space between border and placeholder
+      .v-input__prepend-inner {
+        margin-right: 5px;
+      }
+    }
+
+    // cursor color
+    &.primary--text {
+      caret-color: $color-light-white-100 !important;
+    }
+  }
+}

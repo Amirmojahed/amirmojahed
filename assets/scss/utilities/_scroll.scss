@@ -1,0 +1,22 @@
+.mp-store-scroll {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.mp-store-scroll::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+.mp-store-scroll::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  background: transparent;
+  border-radius: 9999px;
+}
+
+.mp-store-scroll::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 9999px;
+}

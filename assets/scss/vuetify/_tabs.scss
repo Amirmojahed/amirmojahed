@@ -1,0 +1,70 @@
+.v-application {
+  .v-tabs {
+    border-radius: 0.5rem;
+  }
+
+  .v-tabs-bar .v-tab {
+    margin: 0.5rem 0.25rem;
+    border-radius: 0.5rem;
+    padding: 0;
+    min-width: 72px;
+
+    &:hover::before {
+      border-radius: 0.5rem;
+      opacity: 0 !important;
+    }
+  }
+
+  .v-tabs-slider-wrapper {
+    display: none;
+  }
+
+  .v-slide-group__content {
+    &.v-tabs-bar__content {
+      border-radius: 1rem;
+      padding: 0 0.25rem;
+    }
+  }
+
+  .theme--light {
+    &.v-tabs > .v-tabs-bar {
+      background-color: transparent;
+
+      .v-tab--active {
+        background-color: $color-light-primary;
+        color: $color-light-white-100 !important;
+      }
+
+      .v-tab:not(.v-tab--active) {
+        color: $color-light-black-800 !important;
+      }
+    }
+
+    .v-slide-group__content {
+      &.v-tabs-bar__content {
+        background-color: $color-light-white-300;
+      }
+    }
+  }
+
+  .theme--dark {
+    &.v-tabs > .v-tabs-bar {
+      background-color: transparent;
+
+      .v-tab {
+        color: $color-dark-white-100 !important;
+        min-width: 72px;
+      }
+
+      .v-tab--active {
+        background-color: $color-dark-primary;
+      }
+    }
+
+    .v-slide-group__content {
+      &.v-tabs-bar__content {
+        background-color: $color-dark-black-700;
+      }
+    }
+  }
+}

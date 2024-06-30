@@ -1,0 +1,41 @@
+{
+  "name": "rezome",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:prettier": "prettier --check .",
+    "lint": "npm run lint:prettier",
+    "lintfix": "prettier --write --list-different ."
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/i18n": "^7.1.0",
+    "@nuxtjs/vuetify": "^1.12.1",
+    "core-js": "^3.25.3",
+    "eslint": "^7.29.0",
+    "nuxt": "^2.17.3",
+    "swiper": "^9.4.1",
+    "vue": "^2.7.10",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10",
+    "vuetify": "^2.5.5"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.17.4",
+    "@nuxtjs/color-mode": "^2.1.1",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/gtm": "^2.4.0",
+    "@nuxtjs/robots": "^2.5.0",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "@nuxtjs/tailwindcss": "^6.12.0",
+    "@nuxtjs/vuetify": "^1.12.1",
+    "postcss": "^8.4.17",
+    "prettier": "^2.7.1",
+    "vue-toastification": "^1.7.11",
+    "vuetify": "^2.5.5"
+  }
+}

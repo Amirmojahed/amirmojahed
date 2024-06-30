@@ -1,0 +1,217 @@
+.v-application {
+  .theme--light {
+    &.v-input {
+      // background color when the switch is on and opacity
+      &--is-label-active {
+        &.v-input--switch {
+          .v-input--switch__track {
+            background-color: $color-light-secondary !important;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    //disable pointer on the whole container
+    &.v-input--selection-controls {
+      .v-input__slot {
+        cursor: inherit;
+      }
+    }
+
+    //switch circle color
+    &.v-input--switch--inset {
+      &.v-input--is-dirty {
+        .v-input--switch__thumb {
+          color: $color-light-white-100 !important;
+        }
+      }
+    }
+
+    // switch circle color in hover state
+    .v-input--selection-controls__input {
+      &:hover {
+        .v-input--selection-controls__ripple:before {
+          background-color: transparent;
+          transform: scale(1.5);
+        }
+
+        // background color when the switch is on and opacity
+        .v-input--switch__track {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    // switch style when is off
+    &.v-input--switch {
+      .v-input--switch__track {
+        background-color: $color-light-white-300;
+        opacity: 1;
+      }
+
+      // style of the thumb
+      .v-input--switch__thumb {
+        width: 29px;
+        height: 20px;
+        border-radius: 20px;
+      }
+    }
+
+    // switch off disable
+    &.v-input--switch {
+      &.v-input--is-disabled:not(.v-input--is-dirty) {
+        .v-input--switch__track {
+          background-color: $color-light-white-500;
+          opacity: 0.8;
+        }
+      }
+
+      //switch on disable
+      &.v-input--is-disabled {
+        .v-input--switch__track {
+          background-color: $color-light-white-500;
+          opacity: 1;
+        }
+      }
+    }
+
+    //handle ::: on the button
+    &.v-input--switch--inset {
+      // width of the whole switch component
+      .v-input--switch__track {
+        width: 56px;
+      }
+    }
+
+    // disable ripple
+    .v-input--selection-controls__ripple {
+      display: none;
+    }
+
+    //handle ::: on the button
+    &.v-input--switch__thumb {
+      &::before {
+        content: ':::';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0.25rem;
+        font-weight: 900;
+        color: #d9d9d9;
+        opacity: 1;
+      }
+    }
+  }
+
+  .theme--dark {
+    // background color when the switch is on and opacity
+    &.v-input--is-label-active {
+      &.v-input--switch {
+        .v-input--switch__track {
+          background-color: $color-light-secondary !important;
+          opacity: 1;
+        }
+      }
+    }
+
+    //disable pointer on the whole container
+    &.v-input--selection-controls {
+      .v-input__slot {
+        cursor: inherit;
+      }
+    }
+
+    //switch circle color
+    &.v-input--switch--inset {
+      &.v-input--is-dirty {
+        .v-input--switch__thumb {
+          color: $color-light-white-100 !important;
+        }
+      }
+    }
+
+    // switch circle color in hover state
+    .v-input--selection-controls__input {
+      &:hover {
+        .v-input--selection-controls__ripple:before {
+          background-color: transparent;
+          transform: scale(1.5);
+        }
+
+        // background color when the switch is on and opacity
+        .v-input--switch__track {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    // switch style when is off
+    &.v-input--switch {
+      .v-input--switch__track {
+        background-color: $color-light-white-300;
+        opacity: 1;
+      }
+
+      // style of the thumb
+      .v-input--switch__thumb {
+        width: 29px;
+        height: 20px;
+        border-radius: 20px;
+      }
+    }
+
+    // switch off disable
+    &.v-input--switch {
+      &.v-input--is-disabled:not(.v-input--is-dirty) {
+        .v-input--switch__track {
+          background-color: $color-light-white-500;
+          opacity: 0.8;
+        }
+      }
+
+      //switch on disable
+      &.v-input--is-disabled {
+        .v-input--switch__track {
+          background-color: $color-light-white-500;
+          opacity: 1;
+        }
+      }
+    }
+
+    //handle ::: on the button
+    &.v-input--switch--inset {
+      // width of the whole switch component
+      .v-input--switch__track {
+        width: 56px;
+      }
+    }
+
+    //disable ripple
+    .v-input--selection-controls__ripple {
+      display: none;
+    }
+
+    //handle ::: on the button
+    &.v-input--switch__thumb {
+      &::before {
+        content: ':::';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0.25rem;
+        font-weight: 900;
+        color: $color-light-white-900;
+        opacity: 1;
+      }
+    }
+  }
+}

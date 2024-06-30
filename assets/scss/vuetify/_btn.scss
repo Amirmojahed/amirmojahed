@@ -1,0 +1,155 @@
+.v-application {
+  .theme--light {
+    &.v-btn {
+      //&--active:hover::before,
+      //&--active::before {
+      //  opacity: 1;
+      //}
+
+      // text's color and font-weight
+      &.v-btn {
+        color: $color-light-white-100;
+        font-weight: 600;
+        font-size: 1rem;
+        letter-spacing: normal;
+        height: 56px;
+
+        //background color
+        &--has-bg {
+          background-color: $color-light-primary;
+        }
+
+        //border radius
+        &--rounded {
+          border-radius: 30px;
+        }
+
+        //hover
+        &:hover {
+          opacity: 0.8;
+        }
+
+        //disable button font color
+        &--disabled {
+          color: $color-light-black-800 !important;
+
+          //disable button background color
+          &.v-btn--has-bg {
+            background-color: $color-light-white-500 !important;
+          }
+        }
+
+        // style for btn on the navbar component
+        &--text {
+          color: inherit;
+          font-weight: normal;
+          font-size: 1.25rem;
+          letter-spacing: normal;
+
+          &.v-size--default {
+            min-width: fit-content;
+            height: fit-content;
+            padding: 0;
+          }
+        }
+
+        //outline button color and border
+        &--outlined {
+          border: 2px solid $color-light-primary;
+
+          //outline button hover
+          &:hover {
+            background-color: $color-light-white-100;
+          }
+
+          //outline button disabled
+          &.v-btn--disabled {
+            color: $color-light-white-500 !important;
+            border-color: $color-light-white-500;
+
+            // text color of the disabled button
+            span {
+              color: $color-light-white-500;
+            }
+          }
+
+          // text color of the button
+          span {
+            color: $color-light-primary;
+          }
+        }
+      }
+    }
+
+    //padding
+    &.v-btn:not(.v-btn--round).v-size--x-large {
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  .theme--dark {
+    &.v-btn {
+      // text's color and font-weight
+      &.v-btn {
+        color: $color-light-white-100;
+        font-weight: 600;
+
+        //background color
+        &--has-bg {
+          background-color: $color-light-primary;
+        }
+
+        //border radius
+        &--rounded {
+          border-radius: 30px;
+        }
+
+        //hover
+        &:hover {
+          opacity: 0.8;
+        }
+
+        //disable button font color
+        &--disabled {
+          color: $color-light-black-800 !important;
+
+          //disable button background color
+          &.v-btn--has-bg {
+            background-color: $color-light-white-500 !important;
+          }
+        }
+
+        //outline button color and border
+        &--outlined {
+          border: 2px solid $color-light-primary;
+
+          //outline button hover
+          &:hover {
+            background-color: $color-light-white-100;
+          }
+
+          //outline button disabled
+          &.v-btn--disabled {
+            color: $color-light-white-500 !important;
+            border-color: $color-light-white-500;
+
+            // text color of the disabled button
+            span {
+              color: $color-light-white-500;
+            }
+          }
+
+          // text color of the button
+          span {
+            color: $color-light-primary;
+          }
+        }
+      }
+    }
+
+    //padding
+    &.v-btn:not(.v-btn--round).v-size--x-large {
+      padding: 0.5rem 1rem;
+    }
+  }
+}

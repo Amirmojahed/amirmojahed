@@ -1,0 +1,75 @@
+* {
+  touch-action: manipulation;
+}
+
+html {
+  @media screen and (min-width: 600px) {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+}
+
+html::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+html::-webkit-scrollbar-thumb,
+body:hover::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+}
+
+body {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+@supports (padding: max(0px)) {
+  body,
+  header,
+  footer {
+    padding-bottom: min(0vmin, env(safe-area-inset-bottom));
+    padding-top: min(0vmin, env(safe-area-inset-tops));
+    padding-left: min(0vmin, env(safe-area-inset-left));
+    padding-right: min(0vmin, env(safe-area-inset-right));
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.theme--dark.v-application {
+  background: $color-light-black-700;
+}
+
+.theme--light.v-application {
+  background: $color-light-white-100;
+}
+
+.v-application p {
+  margin-bottom: 0 !important;
+}
+
+.theme--dark.v-application a,
+.theme--light.v-application a {
+  color: $color-light-white-300;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.layout-max-width {
+  max-width: $layout-max-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0;
+  padding-left: 0;
+}
