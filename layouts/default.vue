@@ -1,9 +1,12 @@
 <template>
   <v-app>
-    <div class="layout t-h-full t-flex t-flex-col t-relative t-justify-between">
-      <Header class="t-hidden sm:t-block" />
-      <HeaderMobile class="sm:t-hidden" />
-      <nuxt class="layout-content layout-max-width t-mx-auto t-p-4 md:t-p-10" />
+    <div class="layout t-h-full t-flex t-flex-col t-items-center">
+      <img
+        class="layout__bg t-absolute t-h-full t-w-full t-opacity-10"
+        src="assets/background/bg.jpg"
+      />
+      <Header class="t-flex t-justify-center" />
+      <nuxt class="layout-content t-h-full t-w-full t-px-6 layout-max-width" />
     </div>
   </v-app>
 </template>
@@ -12,13 +15,10 @@
 import dark from '~/mixins/dark'
 import rtl from '~/mixins/rtl'
 import Header from '~/components/layouts/Header/Header.vue'
-import HeaderMobile from '~/components/layouts/Header/HeaderMobile.vue'
 
 export default {
   components: {
-    HeaderMobile,
     Header,
-    // Footer
   },
   mixins: [dark, rtl],
 }

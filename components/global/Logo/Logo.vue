@@ -1,7 +1,7 @@
 <template>
   <div
     :class="{
-      't-relative t-flex t-items-center t-justify-center before:t-block before:t-h-[84px] before:t-w-[84px] before:t-absolute before:t-z-0':
+      't-flex t-items-center t-justify-center before:t-block before:t-h-[72px] before:t-w-[72px] before:t-absolute before:t-z-0':
         hasBorder,
     }"
     class="logo"
@@ -12,7 +12,7 @@
         't-relative t-rounded-full t-z-10': hasBorder,
       }"
       :src="$t('logo.url')"
-      class="t-h-20 t-w-fit"
+      class="t-h-[70px] t-w-fit"
     />
   </div>
 </template>
@@ -38,8 +38,8 @@ export default {
   border-radius: 100%;
   background: linear-gradient(
     90deg,
-    hsla(788, 100%, 50%, 1) 0%,
-    hsla(000, 100%, 1%, 1) 10%
+    hsla(773, 100%, 50%, 1) 10%,
+    hsla(000, 100%, 1%, 1) 60%
   );
   animation: rotate 8s linear infinite;
 }
