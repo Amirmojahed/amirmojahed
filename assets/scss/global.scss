@@ -42,7 +42,7 @@ a {
 }
 
 .theme--dark.v-application {
-  background: $color-light-black-700;
+  background: $color-light-black-800;
 }
 
 .theme--light.v-application {
@@ -70,6 +70,6 @@ a {
   max-width: $layout-max-width;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 0;
-  padding-left: 0;
+  //padding-right: 0;
+  //padding-left: 0;
 }

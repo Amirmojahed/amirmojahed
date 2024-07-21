@@ -11,7 +11,7 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: ['./pages/**/*.vue', './layouts/**/*.vue', './components/**/*.vue'],
+  content: ['./pages/**/*.vue', './layouts/**/*.vue', './components/**/*.vue'],
   theme: {
     fontFamily: {
       inter: ['Inter'],

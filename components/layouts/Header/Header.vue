@@ -1,29 +1,11 @@
 <template>
-  <div
-    :class="{ 'header--blur': scrollPosition > 50 }"
-    class="header-desktop t-z-10 t-sticky t-top-0"
-  >
+  <div class="header t-w-full">
     <div
-      class="header-desktop__wrapper layout-max-width t-flex t-justify-between t-items-center t-p-4"
+      class="header-desktop layout-max-width t-flex t-w-full t-gap-3 t-z-10 t-sticky t-top-8"
     >
-      <Logo
-        :class="{ 't-opacity-0': scrollPosition < 150 }"
-        class="header-desktop__wrapper--logo"
-        hasBorder
-      />
-      <nav
-        class="header-desktop__wrapper--nav t-h-full t-flex t-items-center t-gap-16 t-text-light-white-700 t-font-light"
-      >
-        <NuxtLink
-          v-for="nav in navItems.filter((item) => item.enable)"
-          :key="nav"
-          :to="nav.link"
-          class="t-font-bold t-text-lg lg:t-text-xl xxl:t-text-2xl"
-        >
-          {{ nav.title }}
-        </NuxtLink>
-      </nav>
-      <div class="header-desktop__wrapper--info" />
+      <div class="header-desktop__right t-p-8 t-w-full" />
+      <Logo class="header-desktop__logo t-absolute t-z-10" hasBorder />
+      <div class="header-desktop__left t-p-8 t-w-full" />
     </div>
   </div>
 </template>
@@ -37,28 +19,6 @@ export default {
     return {
       scrollPosition: null,
     }
-  },
-
-  computed: {
-    navItems() {
-      return [
-        {
-          title: this.$i18n.t('header.home'),
-          link: this.localePath('/'),
-          enable: true,
-        },
-        {
-          title: this.$i18n.t('header.projects'),
-          link: this.localePath('/projects'),
-          enable: true,
-        },
-        {
-          title: this.$i18n.t('header.contact'),
-          link: this.localePath('/contact'),
-          enable: true,
-        },
-      ]
-    },
   },
   mounted() {
     window.addEventListener('scroll', this.updateScroll)
@@ -75,6 +35,79 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.header-desktop {
+  margin: 30px;
+
+  &__logo {
+    top: 4.5px;
+    right: calc(50% - 35px);
+  }
+
+  &__right,
+  &__left {
+    min-height: 80px;
+    border-radius: 2px;
+    border: 0;
+    border-top: 2px;
+    border-bottom: 2px;
+    border-color: rgba($color-light-secondary, 0.5);
+    border-style: solid;
+    overflow: hidden;
+    position: relative;
+    backdrop-filter: blur(9.4px);
+    -webkit-backdrop-filter: blur(9.4px);
+  }
+
+  &__right {
+    border-bottom-right-radius: 24px;
+    border-top-right-radius: 24px;
+    border-right: 2px;
+    box-shadow: 8px 0 9px rgba($color-light-secondary, 0.5);
+
+    &::after {
+      content: '';
+      z-index: 1;
+      position: absolute;
+    }
+
+    &::after {
+      border-radius: 100%;
+      left: -40px;
+      width: 75px;
+      height: 80px;
+      box-shadow: 0 0 10px rgba($color-light-secondary, 0.5);
+      border: 2px solid rgba($color-light-secondary, 0.5);
+      top: -1px;
+      bottom: 0;
+    }
+  }
+
+  &__left {
+    box-shadow: -8px 0 9px rgba($color-light-secondary, 0.5);
+
+    border-left: 2px;
+    border-bottom-left-radius: 24px;
+    border-top-left-radius: 24px;
+
+    &::before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+    }
+
+    &::before {
+      border-radius: 100%;
+      right: -40px;
+      width: 75px;
+      height: 80px;
+      box-shadow: 0 0 10px rgba($color-light-secondary, 0.5);
+      border: 2px solid rgba($color-light-secondary, 0.5);
+      top: -1px;
+      bottom: 0;
+    }
+  }
+}
+
 .header--blur {
   backdrop-filter: blur(16px);
   //background-color: rgba($color-light-secondary, 0.2);
