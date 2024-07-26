@@ -16,6 +16,7 @@ import ssr from './config/nuxt/ssr'
 import tailwind from './config/nuxt/tailwind'
 import toast from './config/nuxt/toast'
 import vuetify from './config/nuxt/vuetify'
+import fontAwesome from './config/nuxt/fontAwesome'
 
 export default {
   ...head,
@@ -36,4 +37,5 @@ export default {
   ...tailwind,
   ...toast,
   ...vuetify,
+  ...fontAwesome,
 }
