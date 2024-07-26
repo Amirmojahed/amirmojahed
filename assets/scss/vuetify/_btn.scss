@@ -119,6 +119,20 @@
           }
         }
 
+        // style for btn on the navbar component
+        &--text {
+          color: inherit;
+          font-weight: normal;
+          font-size: 1.25rem;
+          letter-spacing: normal;
+
+          &.v-size--default {
+            min-width: fit-content;
+            height: fit-content;
+            padding: 0;
+          }
+        }
+
         //outline button color and border
         &--outlined {
           border: 2px solid $color-light-primary;
